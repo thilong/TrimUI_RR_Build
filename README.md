@@ -1,6 +1,11 @@
 # RetroArch compile things
 Files for compiling retroarch for trimui brick.
 
+
+## Notice
+**ra64.trimui.mod** `is a patched retroarch base on the builds by trimui team.` 
+`It simply bypasses the quick menu.`
+
 ## setup env
 This is just my environment using wsl , you can make your own one.
 
@@ -40,3 +45,4 @@ The "retroarch" is the file I compiled, you can use it directly.
 2. New retroarch now can use "glui" menu driver.
 3. No vulkan video driver. ( No vulkan library in sdk to link...)
 4. No Trimui menu
+5. No shaders, because the mali-fbdev gl driver failed to initialize, and it's replaced by 'sdl_gl';
