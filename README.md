@@ -18,15 +18,17 @@ This is just my environment using wsl , you can make your own one.
 3. Modify the line 9 of build_rr.sh , set TRIMUI_SDK_ROOT with your sdk path.
 4. Make some patchs to let our mod-retroarch to read the assets files provided by trimui team.
 
-   RetroArch use a default path with a prefix ".config" on linux. But the trimui version use ".retroarch".
+   RetroArch use a default path with a prefix ".config" on linux. But the trimui one use ".retroarch".
    Modify "./config/retroarch" to ".retroarch" in the following files. 
     ```
     # platform_unix.c:1741    strlcpy(base_path + _len, "/.config/retroarch", sizeof(base_path) - _len);
     # file_path_special.c:179    ".config/retroarch/", len);
     ```
-5. Excute " bash ./build_rr.sh" in terminal.
+5. Execute " bash ./build_rr.sh" in terminal.
 
 ## How to use
+
+The "retroarch" is the file I compiled, you can use it directly.
 
 1. Push the output file "retroarch" to /mnt/SDCARD/RetroArch
 2. Push the retroarch.cfg to /mnt/SDCARD/RetroArch/.retroarch/retroarch.cfg
